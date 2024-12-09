@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 
 // Set view engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../../src/src/views'));
+app.set('views', path.join(__dirname, '../src/src/views'));
 dotenv.config({ path: path.resolve(__dirname, '../../.env') }); // Explicitly load .env
 
 // Middleware
