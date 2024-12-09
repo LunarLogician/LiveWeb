@@ -53,7 +53,7 @@ app.get('/register', (req, res) => res.render('register'));
 app.get('/login', (req, res) => res.render('login'));
 
 // Handle server
-const PORT = 5000;
+const PORT = 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 process.on('SIGINT', async () => {
