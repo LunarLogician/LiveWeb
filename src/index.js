@@ -7,9 +7,12 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import authRoutes from './../routes/authRoutes.js'
+<<<<<<< HEAD
 
 import miningRoutes from './../routes/miningRoutes.js'
 
+=======
+>>>>>>> 55f1b00 (Fixed the EJs files)
 
 
 console.log('All process.env variables:', process.env); // Debugging log
@@ -45,9 +48,12 @@ mongoose.connect(URL, {
 .then(() => console.log('MongoDB connected successfully'))
 .catch((error) => console.error('MongoDB connection failed:', error));
 app.use('/api/auth', authRoutes);
+<<<<<<< HEAD
 
 app.use('/api', miningRoutes);
 
+=======
+>>>>>>> 55f1b00 (Fixed the EJs files)
 app.get('/', (req, res) => res.render('Home'));
 app.get('/register', (req, res) => res.render('register'));
 app.get('/login', (req, res) => res.render('login'));
