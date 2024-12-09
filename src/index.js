@@ -6,6 +6,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import authRoutes from './../routes/authRoutes.js'
 
 
 console.log('All process.env variables:', process.env); // Debugging log
@@ -40,7 +41,7 @@ mongoose.connect(URL, {
 })
 .then(() => console.log('MongoDB connected successfully'))
 .catch((error) => console.error('MongoDB connection failed:', error));
-
+app.use('/api/auth', authRoutes);
 app.get('/', (req, res) => res.render('Home'));
 app.get('/register', (req, res) => res.render('register'));
 app.get('/login', (req, res) => res.render('login'));
