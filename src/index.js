@@ -7,10 +7,9 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import authRoutes from './../routes/authRoutes.js'
-<<<<<<< HEAD
+
 import miningRoutes from './../routes/miningRoutes.js'
-=======
->>>>>>> ff80f275b6a5b3216e623c43c12d0ae3c9a1b1b2
+
 
 
 console.log('All process.env variables:', process.env); // Debugging log
