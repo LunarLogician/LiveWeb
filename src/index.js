@@ -17,12 +17,12 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Set view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../src/src/views'));
 dotenv.config({ path: path.resolve(__dirname, '../../.env') }); // Explicitly load .env
-app.use(express.static('public'));
-// Middleware
+
+app.use(express.static(path.join(__dirname, '../public')));
+
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -53,7 +53,7 @@ app.get('/register', (req, res) => res.render('register'));
 app.get('/login', (req, res) => res.render('login'));
 
 // Handle server
-const PORT = 3000;
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 process.on('SIGINT', async () => {
