@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Session Status</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file here -->
+    <style>
+        body {
+            background-color: #161614; /* Dark background for a sleek look */
+            color: #e0e0e0; /* Light text for contrast */
+            font-family: 'Poppins', sans-serif; /* Modern font choice */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #ffffff; /* White text for the heading */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .status-info {
+            background: rgba(25, 25, 40, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+
+        .timer {
+            font-size: 2em;
+            color: #caf438; /* Bright color for timer */
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff0055; /* Bright button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #e6004c; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mining Session Status</h1>
+    <div class="status-info">
+        <% if (session) { %>
+            <p><strong>Session ID:</strong> <%= session._id %></p>
+            <p><strong>User ID:</strong> <%= session.userId %></p>
+            <p class="timer" id="timer">
+                <%= Math.floor(miningDuration / 60) %>:<%= (miningDuration % 60 < 10 ? '0' : '') + (miningDuration % 60) %>
+            </p>
+            <p><strong>Coins Earned:</strong> <%= coinsEarned %></p>
+            <form action="/api/mining/stop" method="POST">
+                <button type="submit">Complete Session</button>
+            </form>
+        <% } else { %>
+            <p>No active mining session found.</p>
+        <% } %>
+    </div>
+
+    <script>
+        // Timer logic to continuously update the displayed time
+        const startTime = new Date(<%= session ? JSON.stringify(session.startTime) : Date.now() %>);
+
+        const timerDisplay = document.getElementById('timer');
+
+        function updateTimer() {
+            const now = new Date();
+            const elapsedTime = Math.floor((now - startTime) / 1000); // in seconds
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+
+            // Update timer display
+            timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        updateTimer(); // Start the timer
+        setInterval(updateTimer, 1000); // Update every second
+    </script>
+
+</body>
+</html>

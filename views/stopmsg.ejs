@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Session Started</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file here -->
+    <style>
+        body {
+            background-color: #161614; /* Dark background for a sleek look */
+            color: #e0e0e0; /* Light text for contrast */
+            font-family: 'Poppins', sans-serif; /* Modern font choice */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #ffffff; /* White text for the heading */
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            color: #d3f35f; /* Bright color for subheading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .session-info {
+            background: rgba(25, 25, 40, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff0055; /* Bright button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Transition for hover effect */
+        }
+
+        .btn:hover {
+            background-color: #e6004c; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mining Session Stopped</h1>
+    <h2><%= message %></h2> 
+
+    <button class="btn" onclick="window.location.href='/';">Go to Dashboard</button>
+
+</body>
+</html>

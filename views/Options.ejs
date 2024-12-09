@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Session Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #161614;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #001925;
+            border-left: 5px solid #caf438;
+            margin-bottom: 20px; /* Space between cards */
+            height: 100%; /* Ensure all cards are of equal height */
+        }
+
+        .heading {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .info {
+            color: #d3f35f;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-top: 10px; /* Space above info text */
+        }
+
+        .input {
+            color: #87a4b6;
+            background-color: #002733;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 10px; /* Space below input */
+            font-weight: bold;
+        }
+
+        .input:focus {
+            border-left: 5px solid #caf438;
+        }
+
+        .send-button, .reset-button {
+            font-weight: bold;
+        }
+
+        .send-button {
+            background: #caf438;
+            color: #001925;
+        }
+
+        .send-button:hover {
+            background: transparent;
+            border: 1px solid #ff7a01;
+            color: #caf438;
+        }
+
+        .reset-button {
+            background: #001925;
+            color: #caf438;
+        }
+
+        .reset-button:hover {
+            background: #caf438;
+            color: #001925;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Mining Session Management</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="heading">Start Mining Session</h5>
+                        <form action="/api/mining/start" method="POST">
+                            <div class="form-group">
+                                <button type="submit" class="btn send-button">Start Mining</button>
+                            </div>
+                            <div class="info">Click to initiate your mining session.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="heading">Check Mining Status</h5>
+                        <form action="/api/mining/status" method="GET">
+                            <div class="form-group">
+                                <button type="submit" class="btn send-button">Check Status</button>
+                            </div>
+                            <div class="info">View the current status of your mining operations.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="heading">Check Mining Progress</h5>
+                        <form action="/api/mining/progress" method="GET">
+                            <div class="form-group">
+                                <button type="submit" class="btn send-button">Check Progress</button>
+                            </div>
+                            <div class="info">See how much progress you've made so far.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="heading">Claim Rewards</h5>
+                        <form action="/api/rewards/claim" method="POST">
+                            <div class="form-group">
+                                <button type="submit" class="btn send-button">Claim Rewards</button>
+                            </div>
+                            <div class="info">Claim your earned treasure coins here.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="heading">Stop Mining Session</h5>
+                        <form action="/api/mining/stop" method="POST">
+                            <div class="form-group">
+                                <button type="submit" class="btn send-button">Complete Mining</button>
+                                <button type="reset" class="btn reset-button">Reset</button>
+                            </div>
+                            <div class="info">Enter the number of coins earned during the session.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Progress</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Include your CSS file here -->
+    <style>
+        body {
+            background-color: #1a1a2e; /* Dark background for a sleek look */
+            color: #e0e0e0; /* Light text for contrast */
+            font-family: 'Poppins', sans-serif; /* Modern font choice */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        /* Progress Bar Styles */
+        .progress-details {
+            margin: 20px 0;
+            background-color: rgba(25, 25, 40, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #002733; /* Dark background for the bar */
+            border-radius: 25px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress {
+            height: 20px;
+            background-color: #caf438; /* Bright color for the progress */
+            text-align: center;
+            color: #001925; /* Dark text color for contrast */
+            line-height: 20px;
+            border-radius: 25px;
+            transition: width 0.4s ease; /* Smooth transition for progress */
+        }
+
+        h1 {
+            color: #ffffff; /* White text for the heading */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mining Progress</h1>
+        
+        <% if (session) { %>
+            <div class="progress-details">
+                <p><strong>Mining Duration:</strong> <%= Math.floor(miningDuration / 60) %> minutes</p>
+                <p><strong>Progress towards next reward:</strong> <%= percentageCompleted %>%</p>
+                <p><strong>Total Coins Mined:</strong> <%= totalCoinsMined %></p>
+                
+                <div class="progress-bar">
+                    <div class="progress" style="width: <%= percentageCompleted %>%;">
+                        <span><%= percentageCompleted %>% Completed</span>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <p>No active mining session found.</p>
+        <% } %>
+    </div>
+</body>
+</html>

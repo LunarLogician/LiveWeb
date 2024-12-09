@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Rewards</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Add your CSS file link here -->
+</head>
+<body>
+    <header>
+        <h1>Claim Your Rewards</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Your Rewards Summary</h2>
+            <p>You can claim the following rewards:</p>
+            <ul>
+                <li>5 Treasure Coins for 1 week of continuous activity</li>
+                <li>10 Treasure Coins for 2 consecutive weeks of activity</li>
+                <li>15 Treasure Coins for 3 consecutive weeks of activity</li>
+                <li>20 Treasure Coins for monthly activity</li>
+            </ul>
+        </section>
+
+        <form action="/rewards/claim" method="POST">
+            <button type="submit">Claim Rewards</button>
+        </form>
+
+        <div id="message" class="message">
+            <!-- Success or error messages will be displayed here -->
+            <% if (message) { %>
+                <p><%= message %></p>
+            <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+</body>
+</html>

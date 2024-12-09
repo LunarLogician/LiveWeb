@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Your existing styles here, similar to the previous examples */
+        body {
+            background-color: #161614; /* Dark background for a sleek look */
+            color: #e0e0e0; /* Light text for contrast */
+            font-family: 'Poppins', sans-serif; /* Modern font choice */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 700px;
+            margin: 30px;
+            background-color: #001925;
+            padding: 30px;
+            border-left: 5px solid #caf438;
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% calc(100% - 20px),
+                calc(100% - 20px) 100%,
+                0 100%
+            );
+        }
+
+        /* Headings */
+        .heading {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        /* Additional Class Styles */
+        .c1 {
+            color: #d3f35f;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .c2 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Input Fields */
+        .input {
+            color: #87a4b6;
+            width: 100%;
+            background-color: #002733;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+            border-left: 1px solid transparent;
+        }
+
+        .input:focus {
+            border-left: 5px solid #caf438;
+        }
+
+        /* Textarea Styling */
+        .textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: #013747;
+            color: #caf438;
+            font-weight: bold;
+            resize: none;
+            max-height: 150px;
+            margin-bottom: 20px;
+            border-left: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .textarea:focus {
+            border-left: 5px solid #caf438;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Send Button */
+        .send-button {
+            flex-basis: 70%;
+            background: #caf438;
+            padding: 10px;
+            color: #001925;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .send-button:hover {
+            background: transparent;
+            border: 1px solid #ff7a01;
+            color: #caf438;
+        }
+
+        /* Reset Button */
+        .reset-button-container {
+            filter: drop-shadow(1px 1px 0px #ff7a01);
+            flex-basis: 30%;
+        }
+
+        .reset-button {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            color: #caf438;
+            font-weight: bold;
+            background: #001925;
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                100% calc(100% - 10px),
+                calc(100% - 10px) 100%,
+                0 100%
+            );
+            transition: all 0.2s ease-in-out;
+        }
+
+        .reset-button:hover {
+            background: #caf438;
+            color: #001925;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Register</h2>
+    <form action="/api/auth/register" method="POST">
+        <input type="text" name="username" placeholder="Username" required class="input">
+        <input type="password" name="password" placeholder="Password" required class="input">
+        <button type="submit" class="send-button">Register</button>
+    </form>
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

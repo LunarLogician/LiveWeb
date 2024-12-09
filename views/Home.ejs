@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your external CSS file -->
+    <style>
+        body {
+            background-color: #161614; /* Dark background */
+            color: #e0e0e0; /* Light text for contrast */
+        }
+
+        h1 {
+            color: #ffffff; /* White heading */
+            margin-bottom: 30px; /* Space below main heading */
+        }
+
+        h2 {
+            color: #caf438; /* Techy color for subheadings */
+            margin-top: 40px; /* Space above subheadings */
+            margin-bottom: 20px; /* Space below subheadings */
+        }
+
+        .articles {
+            margin: 20px 0;
+        }
+
+        /* Profile Section */
+        .profile {
+            background-color: #001925; /* Profile background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin: 20px 0; /* Space above and below */
+            text-align: center; /* Center align text */
+        }
+
+        .profile img {
+            width: 150px; /* Profile picture size */
+            height: 150px; /* Profile picture size */
+            border-radius: 50%; /* Circular image */
+            margin-bottom: 15px; /* Space below the image */
+        }
+
+        /* Company Information Section */
+        .company-info {
+            background-color: #001925; /* Company info background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin: 20px 0; /* Space above and below */
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #002733; /* Card background */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space between cards */
+        }
+
+        .card-header {
+            background-color: #caf438; /* Header background color */
+            color: #001925; /* Header text color */
+            font-weight: bold; /* Bold text for card header */
+        }
+
+        .card-body {
+            color: #e0e0e0; /* Card text color */
+        }
+
+        /* Icon Styles */
+        .card-icon {
+            width: 40px; /* Icon size */
+            height: 40px; /* Icon size */
+            margin-right: 10px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Mining App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/how-to-mine">How to Mine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/watch-ads">Watch Ads</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1>Welcome to the Mining App</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">A Message from the CEO</div>
+                    <div class="card-body text-center">
+                        <img src="me.jpeg" alt="Muhammad Zubair" class="rounded-circle" style="width: 120px; height: 120px; margin-bottom: 15px;"> <!-- Replace with your image path -->
+                        <h5 class="card-title">Welcome to the Mining App!</h5>
+                        <p>Hi there! I'm Muhammad Zubair, the CEO and Owner of this platform. I am passionate about empowering individuals in the world of cryptocurrency. Our mission is to provide you with the best tools and resources to succeed in your mining journey.</p>
+                        <p>Thank you for joining us, and let's explore the exciting world of cryptocurrency mining together!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="articles">
+            <h2>Articles and Information</h2>
+            <p>Here you can find various articles about mining and cryptocurrency.</p>
+            <p>Stay updated with the latest trends and news in the mining industry.</p>
+        </div>
+
+        <!-- Cryptocurrency Information Sections -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin" class="card-icon"> Bitcoin
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The First Decentralized Cryptocurrency</h5>
+                        <p class="card-text">Bitcoin is a peer-to-peer currency that allows online payments to be sent directly from one party to another without going through a financial institution.</p>
+                        <h6>History:</h6>
+                        <p>Launched in 2009 by an anonymous person or group using the name Satoshi Nakamoto, Bitcoin was the first cryptocurrency and remains the most valuable and popular.</p>
+                        <h6>Security:</h6>
+                        <p>Bitcoin transactions are secured by cryptography and are recorded on a public ledger known as the blockchain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum" class="card-icon"> Ethereum
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Decentralized Platform That Runs Smart Contracts</h5>
+                        <p class="card-text">Ethereum is a decentralized platform that enables smart contracts and decentralized applications to be built and run without any downtime, fraud, control, or interference from a third party.</p>
+                        <h6>History:</h6>
+                        <p>Launched in 2015 by Vitalik Buterin and a group of co-founders, Ethereum has grown to be the second-largest cryptocurrency by market cap.</p>
+                        <h6>Security:</h6>
+                        <p>Ethereum transactions are also secured by cryptographic algorithms and utilize a blockchain that facilitates smart contracts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" alt="Cardano" class="card-icon"> Cardano
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">A Blockchain Platform for Smart Contracts</h5>
+                        <p class="card-text">Cardano is a blockchain platform that is designed to be more secure and scalable than other blockchain systems.</p>
+                        <h6>History:</h6>
+                        <p>Launched in 2017 by Charles Hoskinson, one of the co-founders of Ethereum, Cardano aims to create a balanced and sustainable ecosystem for cryptocurrencies.</p>
+                        <h6>Security:</h6>
+                        <p>Cardano uses a proof-of-stake consensus mechanism called Ouroboros, which aims to provide better security and energy efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <img src="https://cryptologos.cc/logos/ripple-xrp-logo.png" alt="Ripple" class="card-icon"> Ripple
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Payment Protocol and Cryptocurrency</h5>
+                        <p class="card-text">Ripple enables secure, instant, and low-cost international payments of any size without chargebacks.</p>
+                        <h6>History:</h6>
+                        <p>Ripple was launched in 2012 as a payment protocol and has since grown to support numerous financial institutions globally.</p>
+                        <h6>Security:</h6>
+                        <p>Ripple uses a consensus ledger that validates transactions across its network, ensuring the integrity and security of the system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blockchain Information Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-header" style="margin-bottom: 20px;">Understanding Blockchain Technology</div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header">What Is Blockchain?</div>
+                                <div class="card-body">
+                                    <p>Blockchain is a decentralized ledger of all transactions across a network. This technology ensures transparency and security, making it a vital component of cryptocurrencies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header">How It Works</div>
+                                <div class="card-body">
+                                    <p>Transactions are grouped into blocks and added to a chain in a linear, chronological order. Each block contains a cryptographic hash of the previous block, ensuring that once a block is added, it cannot be altered without altering all subsequent blocks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-header">Security</div>
+                                <div class="card-body">
+                                    <p>The decentralized nature of blockchain means that it is less vulnerable to attacks. Data is stored across multiple nodes, and consensus mechanisms prevent unauthorized changes to the ledger.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profile Section -->
+       
+        <!-- Company Information Section -->
+        <div class="company-info">
+            <h2>About the Company</h2>
+            <p>At Mining App, we are dedicated to simplifying cryptocurrency mining for everyone. Our platform offers user-friendly tools and resources that help both beginners and experienced miners maximize their potential.</p>
+            <p>Join us as we explore the exciting world of cryptocurrency mining together!</p>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 Mining App. All rights reserved.</p>
+        <p>
+            <a href="/about" class="text-light">About Us</a> |
+            <a href="/privacy-policy" class="text-light">Privacy Policy</a> |
+            <a href="/terms-of-service" class="text-light">Terms of Service</a>
+        </p>
+    </footer>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
