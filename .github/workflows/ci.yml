@@ -34,7 +34,7 @@ jobs:
       # Step 5: Build the Vite app
       - name: Build Vite app
         run: |
-          cd Frontend/vite-project  # Adjust path if necessary
+         cd /Videos/FullProject/Frontend/vite-project/LiveWeb
           npm run build
 
      
