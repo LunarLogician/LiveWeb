@@ -26,7 +26,7 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: |
-          cd Frontend/vite-project  # Adjust path if necessary
+           cd /Videos/FullProject/Frontend/vite-project/LiveWeb
           npm install
 
      
