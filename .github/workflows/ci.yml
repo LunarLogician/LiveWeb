@@ -17,19 +17,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js
+      # Step 2: List repository files to debug
+      - name: List repository files
+        run: ls -R
+
+      # Step 3: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Adjust according to your Node.js version
+          node-version: '18'
 
-      # Step 3: Navigate to the project directory and install dependencies
+      # Step 4: Navigate to the project directory and install dependencies
       - name: Install dependencies
         run: |
           cd Frontend/vite-project/LiveWeb
           npm install
 
-      # Step 4: Build the Vite app
+      # Step 5: Build the Vite app
       - name: Build Vite app
         run: |
           cd Frontend/vite-project/LiveWeb
