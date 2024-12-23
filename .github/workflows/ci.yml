@@ -1,4 +1,4 @@
-name: CI Pipeline for Vite React App
+name: CI Pipeline for FullProject
 
 on:
   push:
@@ -17,17 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Step 2: List repository files to debug
-      - name: List repository files
-        run: ls -R
+      # Step 2: Debug repository structure
+      - name: List repository structure
+        run: |
+          echo "Root level:"
+          ls -R
 
       # Step 3: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18'  # Adjust according to your Node.js version
 
-      # Step 4: Navigate to the project directory and install dependencies
+      # Step 4: Install dependencies in LiveWeb
       - name: Install dependencies
         run: |
           cd Frontend/vite-project/LiveWeb
