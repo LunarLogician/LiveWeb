@@ -23,18 +23,14 @@ jobs:
         with:
           node-version: '18'  # Adjust according to your Node.js version
 
-      # Step 3: Install dependencies
+      # Step 3: Navigate to the project directory and install dependencies
       - name: Install dependencies
         run: |
-          cd /Videos/FullProject/Frontend/vite-project/LiveWeb
+          cd Frontend/vite-project/LiveWeb
           npm install
 
-     
-
-      # Step 5: Build the Vite app
+      # Step 4: Build the Vite app
       - name: Build Vite app
         run: |
-         cd /Videos/FullProject/Frontend/vite-project/LiveWeb
+          cd Frontend/vite-project/LiveWeb
           npm run build
-
-     
