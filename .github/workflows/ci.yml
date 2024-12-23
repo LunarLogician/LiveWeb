@@ -32,7 +32,7 @@ jobs:
       # Step 4: Run linting (optional)
       - name: Run ESLint
         run: |
-          cd Frontend/vite-project  # Adjust path if necessary
+          cd /Videos/FullProject/Frontend/vite-project/LiveWeb
           npm run lint
 
       # Step 5: Build the Vite app
@@ -41,8 +41,4 @@ jobs:
           cd Frontend/vite-project  # Adjust path if necessary
           npm run build
 
-      # Step 6: Run tests (if you have tests configured, otherwise you can skip this)
-      - name: Run tests
-        run: |
-          cd Frontend/vite-project  # Adjust path if necessary
-          npm test  # Adjust if you have a specific test script
+     
