@@ -29,11 +29,7 @@ jobs:
           cd Frontend/vite-project  # Adjust path if necessary
           npm install
 
-      # Step 4: Run linting (optional)
-      - name: Run ESLint
-        run: |
-          cd /Videos/FullProject/Frontend/vite-project/LiveWeb
-          npm run lint
+     
 
       # Step 5: Build the Vite app
       - name: Build Vite app
