@@ -1,0 +1,48 @@
+name: CI Pipeline for Vite React App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Adjust according to your Node.js version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          cd Frontend/vite-project  # Adjust path if necessary
+          npm install
+
+      # Step 4: Run linting (optional)
+      - name: Run ESLint
+        run: |
+          cd Frontend/vite-project  # Adjust path if necessary
+          npm run lint
+
+      # Step 5: Build the Vite app
+      - name: Build Vite app
+        run: |
+          cd Frontend/vite-project  # Adjust path if necessary
+          npm run build
+
+      # Step 6: Run tests (if you have tests configured, otherwise you can skip this)
+      - name: Run tests
+        run: |
+          cd Frontend/vite-project  # Adjust path if necessary
+          npm test  # Adjust if you have a specific test script
